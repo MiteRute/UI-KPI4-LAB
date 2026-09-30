@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>UI-елементи</title>
+</head>
+<body>
+
+<h1>UI for students</h1>
+<p>На цій сторінці представлено 10 елементів інтерфейсу користувача</p>
+
+<hr>
+
+<!-- 1. Radiobutton -->
+<section>
+    <h2>1. Radiobutton</h2>
+    <p><strong>Призначення:</strong> Використовується для вибору лише одного варіанта з обмеженого переліку взаємовиключних опцій</p>
+    <fieldset>
+        <legend>Оберіть спосіб доставки:</legend>
+        <input type="radio" id="delivery_courier" name="delivery" value="courier" checked>
+        <label for="delivery_courier">Кур'єрська доставка</label><br>
+
+        <input type="radio" id="delivery_post" name="delivery" value="post">
+        <label for="delivery_post">Поштове відділення</label><br>
+
+        <input type="radio" id="delivery_pickup" name="delivery" value="pickup">
+        <label for="delivery_pickup">Самовивіз зі складу</label>
+    </fieldset>
+</section>
+
+<hr>
+
+<!-- 2. Checkbox -->
+<section>
+    <h2>2. Checkbox</h2>
+    <p><strong>Призначення:</strong> Дозволяє обрати декілька варіантів одночасно</p>
+    <fieldset>
+        <legend>Додаткові послуги та згода:</legend>
+        <input type="checkbox" id="gift_wrap" name="services" value="gift">
+        <label for="gift_wrap">Подарункова упаковка</label><br>
+
+        <input type="checkbox" id="insurance" name="services" value="insurance">
+        <label for="insurance">Страхування вантажу</label><br>
+
+        <input type="checkbox" id="agree" name="terms" required>
+        <label for="agree">Погоджуюся з правилами сервісу</label>
+    </fieldset>
+</section>
+
+<hr>
+
+<!-- 3. Text input -->
+<section>
+    <h2>3. Text input</h2>
+    <p><strong>Призначення:</strong> Поле для введення користувачем довільного рядка тексту</p>
+    <label for="username_input">Введіть ваше ім'я:</label>
+    <input type="text" id="username_input" name="username" placeholder="Наприклад, Максим" maxlength="50">
+</section>
+
+<hr>
+
+<!-- 4. Tabs -->
+<section>
+    <h2>4. Tabs</h2>
+    <p><strong>Призначення:</strong> Організація та розділення контенту за секціями в одному вікні без перезавантаження сторінки. </p>
+
+    <details name="tab-group" open>
+        <summary><strong>Вкладка: Опис</strong></summary>
+        <p>Детальна інформація про товар його призначення та технічні характеристики.</p>
+    </details>
+
+    <details name="tab-group">
+        <summary><strong>Вкладка: Відгуки покупців</strong></summary>
+        <p>Коментарі та оцінки користувачів які вже придбали цей товар.</p>
+    </details>
+
+    <details name="tab-group">
+        <summary><strong>Вкладка: Гарантія та повернення</strong></summary>
+        <p>Умови повернення протягом 14 днів та контакти сервісних центрів.</p>
+    </details>
+</section>
+
+<hr>
+
+<!-- 5. Button -->
+<section>
+    <h2>5. Button</h2>
+    <p><strong>Призначення:</strong> Ініціація певної дії користувача відправка форми, скасування, скидання даних або запуск функції</p>
+    <button type="button">Звичайна дія</button>
+    <button type="submit">Надіслати форму</button>
+    <button type="reset">Скинути поля</button>
+    <button type="button" disabled>Неактивна кнопка</button>
+</section>
+
+<hr>
+
+<!-- 6. Text label -->
+<section>
+    <h2>6. Text label</h2>
+    <p><strong>Призначення:</strong> Текстовий підпис до елемента керування.</p>
+    <label for="user_email">Адреса електронної пошти:</label>
+    <input type="email" id="user_email" name="email" placeholder="user@example.com">
+</section>
+
+<hr>
+
+<!-- 7. Link -->
+<section>
+    <h2>7. Link </h2>
+    <p><strong>Призначення:</strong> Навігація між сторінками, перехід до зовнішніх веб-ресурсів або стрибок до певного елемента на поточній сторінці.</p>
+    <p>
+        <a href="https://uk.wikipedia.org" rel="noopener noreferrer">Посилання на Вікіпедію</a> |
+        <a href="#username_input">Перейти до поля текстового вводу</a>
+    </p>
+</section>
+
+<hr>
+
+<!-- 8. Tooltip -->
+<section>
+    <h2>8. Tooltip </h2>
+    <p><strong>Призначення:</strong> Коротка контекстна довідка, яка з'являється при наведенні курсору миші на елемент. </p>
+    <p>Наведіть курсор миші на підкреслений термін:
+        <abbr title="User Interface">UI</abbr>
+    </p>
+</section>
+
+<hr>
+
+<!-- 9. Dropdown list -->
+<section>
+    <h2>9. Dropdown list</h2>
+    <p><strong>Призначення:</strong> Компактний вибір одного значень із довгого списку варіантів що не займає зайвого місця на екрані до розкриття.</p>
+    <label for="country_select">Оберіть країну проживання:</label>
+    <select id="country_select" name="country">
+        <option value="" disabled selected>-- Оберіть країну --</option>
+        <option value="ua">Україна</option>
+        <option value="pl">Польща</option>
+        <option value="de">Німеччина</option>
+    </select>
+</section>
+
+<hr>
+
+<!-- 10. Data grid -->
+<section>
+    <h2>10. Data grid</h2>
+    <p><strong>Призначення:</strong> Впорядковане двовимірне відображення структурованих даних у вигляді рядків та стовпців для зручного читання аналізу та порівняння інформації.</p>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <caption>Перелік замовлень користувача</caption>
+        <thead>
+        <tr>
+            <th scope="col">ID замовлення</th>
+            <th scope="col">Клієнт</th>
+            <th scope="col">Товар</th>
+            <th scope="col">Сума</th>
+            <th scope="col">Статус</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>#1001</td>
+            <td>Олена Коваль</td>
+            <td>Ноутбук Lenovo</td>
+            <td>28500</td>
+            <td>Доставлено</td>
+        </tr>
+        <tr>
+            <td>#1002</td>
+            <td>Максим Шевченко</td>
+            <td>Бездротова миша</td>
+            <td>750</td>
+            <td>В обробці</td>
+        </tr>
+        <tr>
+            <td>#1003</td>
+            <td>Ірина Бондар</td>
+            <td>Монітор 27" Dell</td>
+            <td>11200</td>
+            <td>Відправлено</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <th colspan="3" scope="row">Загальна сума:</th>
+            <td colspan="2"><strong>40 450 грн</strong></td>
+        </tr>
+        </tfoot>
+    </table>
+</section>
+
+</body>
+</html>
